@@ -1,6 +1,6 @@
 // http://www.omdbapi.com/
 
-const apiKey = "YOUR_OMDBAPI_KEY_HERE"; // Tip: typically you'll want to keep any keys out of git
+const apiKey = process.env.REACT_APP_OMDBAPI; // Tip: typically you'll want to keep any keys out of git
 const baseApiURL = `http://www.omdbapi.com/?apikey=${apiKey}&`;
 
 /* Write an arrow function called getMoviesBySearchTerm that takes a search string as
@@ -41,5 +41,5 @@ export const getMovieDetailsById = async (searchId) => {
         return result;
     }
 
-    return null;
+    return {};
 };
